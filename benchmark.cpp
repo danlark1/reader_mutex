@@ -103,10 +103,10 @@ void BM_Get(benchmark::State& state) {
   }
 }
 
-BENCHMARK(BM_Get<absl_mutex::StringGetter>)->ThreadRange(2, 32)->Threads(512);
-BENCHMARK(BM_Get<absl_mutex_ex::StringGetter>)->ThreadRange(2, 32)->Threads(512);
-BENCHMARK(BM_Get<std_mutex::StringGetter>)->ThreadRange(2, 32)->Threads(512);
-BENCHMARK(BM_Get<std_mutex_ex::StringGetter>)->ThreadRange(2, 32)->Threads(512);
+BENCHMARK(BM_Get<absl_mutex::StringGetter>)->ThreadRange(2, 32);
+BENCHMARK(BM_Get<absl_mutex_ex::StringGetter>)->ThreadRange(2, 32);
+BENCHMARK(BM_Get<std_mutex::StringGetter>)->ThreadRange(2, 32);
+BENCHMARK(BM_Get<std_mutex_ex::StringGetter>)->ThreadRange(2, 32);
 
 }  // namespace
 
